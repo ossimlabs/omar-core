@@ -17,7 +17,7 @@ node("master"){
     def omarCommonProjName = "omar-common"
     if(artifactoryCredentials)
     {
-    println artifactoryCredentials
+    println artifactoryCredentials.properties
     }
     stage("Checkout"){
         dir("ossim-ci") {
