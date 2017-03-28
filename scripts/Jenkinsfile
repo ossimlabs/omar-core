@@ -41,7 +41,7 @@ node("master"){
         // cd into the code directory to pick up the local build.gradle when building
         // build the plugin
         sh """
-        pushd ${workspaceDir}/${appName}/plugins/omar-core-plugin
+        pushd ${workspaceDir}/${appName}/plugins/${appName}-plugin
         ./gradlew install
         popd
         """
@@ -55,7 +55,7 @@ node("master"){
                             passwordVariable: 'ARTIFACTORY_PASSWORD']])
             {
                 sh """
-                pushd ${workspaceDir}/${appName}/plugins/omar-core-plugin
+                pushd ${workspaceDir}/${appName}/plugins/${appName}-plugin
                 ./gradlew artifactoryPublish
                 popd
                 """
