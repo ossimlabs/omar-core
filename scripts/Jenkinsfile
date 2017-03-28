@@ -48,25 +48,18 @@ node("master"){
       }
       stage ("Publish Artifactory")
       {
-          try{
 
-              withCredentials([[$class: 'UsernamePasswordMultiBinding', 
-                                credentialsId: 'artifactoryCredentials',
-                                usernameVariable: 'ARTIFACTORY_USERNAME', 
-                                passwordVariable: 'ARTIFACTORY_PASSWORD']])
-                {
-                    sh """
-                    pushd ${workspaceDir}/${appName}/plugins/omar-core-plugin
-                    ./gradlew artifactoryPublish
-                    popd
-                    """
-                } 
-            }
-            catch(e)
+          withCredentials([[$class: 'UsernamePasswordMultiBinding', 
+                            credentialsId: 'artifactoryCredentials',
+                            usernameVariable: 'ARTIFACTORY_USERNAME', 
+                            passwordVariable: 'ARTIFACTORY_PASSWORD']])
             {
-                println e
-                println "Ignoring push, credentials unavaliable!"
-            }
+                sh """
+                pushd ${workspaceDir}/${appName}/plugins/omar-core-plugin
+                ./gradlew artifactoryPublish
+                popd
+                """
+            } 
       }
     }
     catch(e){
