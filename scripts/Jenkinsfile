@@ -16,7 +16,7 @@ node("master"){
     def appName = "omar-core"
     def omarCommonProjName = "omar-common"
     env.OMAR_COMMON_PROPERTIES="${workspaceDir}/${omarCommonProjName}/omar-common-properties.gradle"
-    
+
     stage("Checkout"){
         dir("ossim-ci") {
             git branch: "${OSSIM_GIT_BRANCH}", url: "https://github.com/ossimlabs/ossim-ci.git"
@@ -33,7 +33,7 @@ node("master"){
     }
 
     try {
-     stage ("Publish Artifactory")
+     stage ("Publish Plugin Artifactory")
       {
         sh """
         pushd ${workspaceDir}/${appName}/plugins/${appName}-plugin
