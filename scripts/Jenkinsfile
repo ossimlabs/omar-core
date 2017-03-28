@@ -15,7 +15,7 @@ node("master"){
     def workspaceDir = pwd()
     def appName = "omar-core"
     def omarCommonProjName = "omar-common"
-
+g
     stage("Checkout"){
         dir("ossim-ci") {
             git branch: "${OSSIM_GIT_BRANCH}", url: "https://github.com/ossimlabs/ossim-ci.git"
@@ -50,18 +50,16 @@ node("master"){
       {
           withCredentials([[$class: 'UsernamePasswordMultiBinding', 
                             credentialsId: 'artifactoryCredentials',
-                            usernameVariable: 'USER', 
-                            passwordVariable: 'PASSWORD']])
+                            usernameVariable: 'ARTIFACTORY_USERNAME', 
+                            passwordVariable: 'ARTIFACTORY_PASSWORD']])
             {
-                env.ARTIFACTORY_USERNAME=USER
-                env.ARTIFACTORY_PASSWORD=PASSWORD
-            } 
-
                 sh """
                 pushd ${workspaceDir}/${appName}/plugins/omar-core-plugin
                 ./gradlew artifactoryPublish
                 popd
                 """
+            } 
+
 
                 
 
