@@ -60,10 +60,9 @@ Brief summary/description of the plugin.
             result
         }
         URL.metaClass.setParams{ p ->
-            String queryParams = p.collect { k,v -> if(v) "${k}=${v}"; else return "" }.join('&').toString()
+            String queryParams = p.findResults { if(it.value != null) it  else null }?.join("&")?.toString()
             delegate.set(delegate.protocol, delegate.host, delegate.port, delegate.authority, delegate.userInfo,
                          delegate.path, queryParams, delegate.ref)
-            //delegate.query = p.collect { k,v -> if(v) "${k}=${v}"; else return "" }.join('&').toString()
         }
 
         // TODO Implement registering dynamic methods to classes (optional)
