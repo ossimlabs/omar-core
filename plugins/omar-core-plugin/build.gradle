@@ -70,7 +70,6 @@ dependencies {
   testCompile "org.grails.plugins:geb"
   testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0"
   testRuntime "net.sourceforge.htmlunit:htmlunit:2.23"
-  compile "org.postgresql:postgresql:9.3-1103-jdbc41"
 
   compile "joda-time:joda-time:2.9.7"
   compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
