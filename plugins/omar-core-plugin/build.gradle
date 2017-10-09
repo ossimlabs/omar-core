@@ -16,7 +16,7 @@ buildscript {
   }
   dependencies {
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.8.2"
+    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
   }
 }
 
@@ -46,15 +46,16 @@ repositories {
   if ( ! System.getenv('O2_DEV_HOME') ) {
     maven { url "${ossimMavenProxy}" }
   }
+
   maven { url "https://repo.grails.org/grails/core" }
 }
 
-dependencyManagement {
-  imports {
-    mavenBom "org.grails:grails-bom:$grailsVersion"
-  }
-  applyMavenExclusions false
-}
+// dependencyManagement {
+//   imports {
+//     mavenBom "org.grails:grails-bom:$grailsVersion"
+//   }
+//   applyMavenExclusions false
+// }
 
 dependencies {
   compile "org.springframework.boot:spring-boot-starter-logging"
@@ -62,21 +63,33 @@ dependencies {
   compile "org.grails:grails-core"
   compile "org.springframework.boot:spring-boot-starter-actuator"
   compile "org.springframework.boot:spring-boot-starter-tomcat"
-  compile "org.grails:grails-dependencies:3.1.14"
   compile "org.grails:grails-web-boot"
+  compile "org.grails:grails-logging"
+  compile "org.grails:grails-plugin-rest"
+  compile "org.grails:grails-plugin-databinding"
+  compile "org.grails:grails-plugin-i18n"
+  compile "org.grails:grails-plugin-services"
+  compile "org.grails:grails-plugin-url-mappings"
+  compile "org.grails:grails-plugin-interceptors"
   compile "org.grails.plugins:cache"
+  compile "org.grails.plugins:async"
   compile "org.grails.plugins:scaffolding"
-
-  runtime "com.h2database:h2"
+  compile "org.grails.plugins:gsp"
   console "org.grails:grails-console"
-  runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.8.2"
+  profile "org.grails.profiles:web-plugin"
+  provided "org.grails:grails-plugin-services"
+  provided "org.grails:grails-plugin-domain-class"
+  runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.2"
+  testCompile "org.grails:grails-gorm-testing-support"
   testCompile "org.grails:grails-plugin-testing"
   testCompile "org.grails.plugins:geb"
-  testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0"
-  testRuntime "net.sourceforge.htmlunit:htmlunit:2.23"
+  testCompile "org.grails:grails-web-testing-support"
+  testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
+  testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 
   compile "joda-time:joda-time:2.9.7"
-  compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
+  // compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
+  compile 'org.grails.plugins:swagger:1.0.0'
 
 }
 
