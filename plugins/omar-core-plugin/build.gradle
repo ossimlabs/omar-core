@@ -42,9 +42,9 @@ ext {
 }
 
 repositories {
+  maven { url "https://dl.bintray.com/ajay-kumar/plugins" }    
   mavenLocal()
   maven { url "${ossimMavenProxy}" }
-  maven { url "https://dl.bintray.com/ajay-kumar/plugins" }    
   maven { url "https://repo.grails.org/grails/core" }
 }
 
