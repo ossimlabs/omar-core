@@ -70,8 +70,8 @@
 <script src="webjars/swagger-ui/3.2.2/swagger-ui-standalone-preset.js"> </script>
 <script>
 window.onload = function() {
-const ui = SwaggerUIBundle({
-      url: "/apis",
+var ui = SwaggerUIBundle({
+      url: "${g.createLink(uri:'/apis')}",
       validatorUrl: false,
       dom_id: '#swagger-ui',
       presets: [
