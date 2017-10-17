@@ -5,15 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><g:meta name="info.app.name"/> | Admin</title>
+
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <%--
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"></link>
-    --%>
-
-    <asset:stylesheet href="AdminLTE2.css"></asset:stylesheet>
+    <asset:stylesheet href="actuator-ui/AdminLTE2.css"></asset:stylesheet>
     <asset:javascript src="actuator-ui/plugins/jQuery/jQuery-2.1.4.min.js"></asset:javascript>
     <asset:javascript src="actuator-ui/plugins/datatables/jquery.dataTables.js"></asset:javascript>
 
