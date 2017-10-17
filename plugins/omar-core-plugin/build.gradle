@@ -1,5 +1,5 @@
-buildscript {
-  ext {
+buildscript{
+  ext{
     grailsVersion = project.grailsVersion
     baseImage = ""
   }
@@ -7,20 +7,18 @@ buildscript {
   {
     apply from: System.env.OMAR_COMMON_PROPERTIES
   }
-  repositories {
+  repositories{
     mavenLocal()
-    if ( ! System.getenv('O2_DEV_HOME') ) {
-      maven { url "${ossimMavenProxy}" }
-    }
+    maven { url "${ossimMavenProxy}" }
     maven { url "https://repo.grails.org/grails/core" }
   }
-  dependencies {
+  dependencies{
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
     classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
   }
 }
 
-plugins {
+plugins{
   id "org.sonarqube" version "2.5"
 }
 
@@ -87,6 +85,7 @@ dependencies {
 
   compile "joda-time:joda-time:2.9.7"
   // compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
+  compile 'org.webjars:swagger-ui:3.2.2'
   compile 'org.grails.plugins:swagger:1.0.0'
 
 }

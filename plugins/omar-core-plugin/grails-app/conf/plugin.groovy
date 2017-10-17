@@ -16,6 +16,6 @@ swagger {
            url = "http://www.tothenew.com/"
        }
    }
-   schemes = [Scheme.HTTP]
+   schemes = [Scheme.HTTPS, Scheme.HTTP]
    consumes = ["application/json"]
 }
