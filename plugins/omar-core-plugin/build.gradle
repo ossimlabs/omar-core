@@ -40,7 +40,8 @@ ext {
 }
 
 repositories {
-  maven { url "https://dl.bintray.com/ajay-kumar/plugins" }    
+  maven { url "https://dl.bintray.com/ajay-kumar/plugins" }
+  maven { url  "http://dl.bintray.com/dmahapatro/plugins" }
   mavenLocal()
   maven { url "${ossimMavenProxy}" }
   maven { url "https://repo.grails.org/grails/core" }
@@ -54,6 +55,9 @@ repositories {
 // }
 
 dependencies {
+  compile "org.grails.plugins:actuator-ui:1.1"
+  compile 'org.webjars:ionicons:2.0.1'
+
   compile "org.springframework.boot:spring-boot-starter-logging"
   compile "org.springframework.boot:spring-boot-autoconfigure"
   compile "org.grails:grails-core"
