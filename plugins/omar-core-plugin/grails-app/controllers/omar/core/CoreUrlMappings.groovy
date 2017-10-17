@@ -4,7 +4,7 @@ class CoreUrlMappings {
 
    static mappings = {
 
-     "/api/$action?/$id?"(controller: "apiDoc", action: "getDocuments") 
+     "/apis/$action?/$id?"(controller: "apiDoc", action: "getDocuments") 
      "/apiDoc/index"(controller: "apiDoc", action: "getDocuments") 
 
       "/$controller/$action?/$id?(.$format)?"{
