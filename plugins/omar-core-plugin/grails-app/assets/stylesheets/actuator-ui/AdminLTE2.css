@@ -2,8 +2,8 @@
 *= require bootstrap/css/bootstrap
 *= require skins/_all-skins
 *= require plugins/datatables/dataTables.bootstrap
+*= require webjars/font-awesome/4.4.0/css/font-awesome.css
 *= require webjars/ionicons/2.0.1/css/ionicons.min.css
-*= require font-awesome.min.css
 *= require_tree .
 */
 

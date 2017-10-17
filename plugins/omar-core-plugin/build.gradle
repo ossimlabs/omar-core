@@ -57,7 +57,8 @@ repositories {
 dependencies {
   compile "org.grails.plugins:actuator-ui:1.1"
   compile 'org.webjars:ionicons:2.0.1'
-
+  compile "org.webjars:font-awesome:4.4.0"
+  
   compile "org.springframework.boot:spring-boot-starter-logging"
   compile "org.springframework.boot:spring-boot-autoconfigure"
   compile "org.grails:grails-core"
