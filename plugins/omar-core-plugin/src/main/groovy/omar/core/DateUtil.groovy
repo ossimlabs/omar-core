@@ -42,6 +42,15 @@ class DateUtil
     return date
   }
 
+  public static def formatUTC(def date, String format="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+  {
+    if(date instanceof Date)
+    {
+      date.format(format, TimeZone.getTimeZone("UTC"))
+    }
+
+    date
+  }
 
   public static Date parseDate(String dateString)
   {
