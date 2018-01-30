@@ -26,7 +26,7 @@ class BannersTagLib {
     			 style: "background: ${backgroundColor};")
     		{
 
-    			p (style: "margin-top: 3px; text-size: 19px; color: ${textColor}; text-shadow: 0px .5px .5px #fff;") {
+    			p (style: "margin-top: 3px; text-size: 19px; color: ${textColor};") {
     				strong(classification)
     			}
     		}
