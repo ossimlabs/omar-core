@@ -14,12 +14,13 @@ buildscript{
   }
   dependencies{
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
+    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineGradleV"
   }
 }
 
 plugins{
-  id "org.sonarqube" version "2.5"
+  id "org.sonarqube" version "2.6.2"
+  id "com.github.ben-manes.versions" version "0.17.0"
 }
 
 apply plugin: "eclipse"
@@ -80,17 +81,17 @@ dependencies {
   profile "org.grails.profiles:web-plugin"
   provided "org.grails:grails-plugin-services"
   provided "org.grails:grails-plugin-domain-class"
-  runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.2"
+  runtime "com.bertramlabs.plugins:asset-pipeline-grails:${assetPipelineGrailsV}"
   testCompile "org.grails:grails-gorm-testing-support"
   testCompile "org.grails:grails-plugin-testing"
   testCompile "org.grails.plugins:geb"
   testCompile "org.grails:grails-web-testing-support"
-  testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
-  testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+  testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:${seleniumHtmlUnitDriverV}"
+  testRuntime "net.sourceforge.htmlunit:htmlunit:${htmlUnitV}"
 
-  compile "joda-time:joda-time:2.9.7"
+  compile "joda-time:joda-time:${jodaTimeV}"
   // compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
-  compile 'org.webjars:swagger-ui:3.2.2'
+  compile "org.webjars:swagger-ui:${webjarsSwaggerUIV}"
   compile 'org.grails.plugins:swagger:1.0.0'
 
 }
