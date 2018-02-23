@@ -91,8 +91,7 @@ dependencies {
 
   compile "joda-time:joda-time:${jodaTimeV}"
   // compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
-  //compile "org.webjars:swagger-ui:${webjarsSwaggerUIV}"
-  compile "org.webjars:swagger-ui:3.10.0"
+  compile "org.webjars:swagger-ui:${webjarsSwaggerUIV}"
   compile 'org.grails.plugins:swagger:1.0.0'
 
 }
