@@ -22,7 +22,7 @@ class BannersTagLib {
     	// out << "<div class='navbar navbar-default navbar-fixed-${attrs.position ?: 'top'} text-center' style='background-color: ${backgroundColor};'><p style='color: ${textColor}; font-size: 19px'>${classification}</p></div>"
 
     	def x = {
-    		div ("class": "navbar navbar-default navbar-fixed-${attrs.position ?: 'top'} text-center",
+    		div ("class": "navbar navbar-default navbar-fixed-${attrs.position ?: 'top'} text-center classified-text",
     			 style: "background: ${backgroundColor};")
     		{
 
