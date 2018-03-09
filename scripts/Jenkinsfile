@@ -44,7 +44,7 @@ node(""){
                 // It's important to add --info because of SONARJNKNS-281
                 sh """
                   pushd ${workspaceDir}/${appName}
-                  ./gradlew --info :${appName}-plugin:sonarqube
+                  gradle --info :${appName}-plugin:sonarqube
                   popd
                 """
             }
@@ -64,7 +64,7 @@ node(""){
             {
                 sh """
                 pushd ${workspaceDir}/${appName}
-                ./gradlew :${appName}-plugin:artifactoryPublish
+                gradle :${appName}-plugin:artifactoryPublish
                 popd
                 """
             }
