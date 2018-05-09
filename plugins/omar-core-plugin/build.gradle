@@ -97,7 +97,7 @@ dependencies {
   // compile "org.grails.plugins:swaggydoc-grails3:0.26.0"
   compile "org.webjars:swagger-ui:${webjarsSwaggerUIV}"
   compile 'org.grails.plugins:swagger:1.0.0'
-
+  compile 'org.grails.plugins:converters'
 }
 
 assets {
