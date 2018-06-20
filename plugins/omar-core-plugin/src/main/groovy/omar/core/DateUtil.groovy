@@ -62,6 +62,10 @@ class DateUtil
         sdf = new SimpleDateFormat("yyyyMMdd");
 //        println "one: ${dateString}"
         break
+      case ~/[0-9]{4}[0-1][0-9][0-3][0-9][0-2][0-9][0-6][0-9][0-6][0-9]/:
+        sdf = new SimpleDateFormat("yyyyMMddhhmmss");
+//        println "one: ${dateString}"
+        break
     case ~/[0-9]{4}-[0-1][0-9]-[0-3][0-9]/:
       sdf = new SimpleDateFormat("yyyy-MM-dd");
       //println "one: ${dateString}"
@@ -118,7 +122,8 @@ class DateUtil
               "yyyyMMdd'T'HH:mm:ss",
               "yyyyMMdd'T'HH:mm:ss.ssss",
               "EEE MMM dd HH:mm:ss ZZZ yyyy",
-              "yyyy-MM-dd HH:mm:ss"
+              "yyyy-MM-dd HH:mm:ss",
+              "yyyyMMddhhmmss"
       ]
     }
 
