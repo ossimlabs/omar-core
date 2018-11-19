@@ -98,6 +98,8 @@ dependencies {
   compile "org.webjars:swagger-ui:${webjarsSwaggerUIV}"
   compile 'org.grails.plugins:swagger:1.0.0'
   compile 'org.grails:grails-plugin-converters:3.2.3'
+  compile "io.swagger:swagger-annotations:${webjarsSwaggerUIV}"
+  compile "io.swagger:swagger-models:${webjarsSwaggerUIV}"
 }
 
 assets {
