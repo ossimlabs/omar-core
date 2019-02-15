@@ -35,23 +35,20 @@ node("${BUILD_NODE}"){
         archiveArtifacts "plugins/*/build/libs/*.jar"
     }
 
-    stage ("OpenShift Tag Image")
+    stage ("Publish Nexus")
     {
         withCredentials([[$class: 'UsernamePasswordMultiBinding',
-                          credentialsId: 'openshiftCredentials',
-                          usernameVariable: 'OPENSHIFT_USERNAME',
-                          passwordVariable: 'OPENSHIFT_PASSWORD']])
+                        credentialsId: 'nexusCredentials',
+                        usernameVariable: 'MAVEN_REPO_USERNAME',
+                        passwordVariable: 'MAVEN_REPO_PASSWORD']])
         {
-            // Run all tasks on the app. This includes pushing to OpenShift and S3.
             sh """
-                gradle openshiftTagImage \
-                    -PossimMavenProxy=${OSSIM_MAVEN_PROXY}
-
+            gradle publish \
+                -PossimMavenProxy=${OSSIM_MAVEN_PROXY}
             """
         }
     }
 
-        
    stage("Clean Workspace")
    {
       if ("${CLEAN_WORKSPACE}" == "true")
