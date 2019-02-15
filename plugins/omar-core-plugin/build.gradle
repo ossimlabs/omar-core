@@ -1,19 +1,12 @@
 buildscript{
-  ext{
-    grailsVersion = project.grailsVersion
-    baseImage = ""
-  }
-  if(System.env.OMAR_COMMON_PROPERTIES)
-  {
-    apply from: System.env.OMAR_COMMON_PROPERTIES
-  }
   repositories{
     mavenLocal()
-    maven { url "${ossimMavenProxy}" }
+    maven { url ossimMavenProxy }
   }
   dependencies{
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineGradleV"
+    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.10"
+    classpath 'io.ossim:gradleDefaults:1.4-SNAPSHOT'
   }
 }
 
@@ -32,24 +25,18 @@ apply plugin: "asset-pipeline"
 apply plugin: "java"
 apply plugin: "maven-publish"
 
-group "io.ossim.omar.plugins"
-
-ext {
-  grailsVersion = project.grailsVersion
-  gradleWrapperVersion = project.gradleWrapperVersion
-}
-
 repositories {
   mavenLocal()
-  maven { url "${ossimMavenProxy}" }
+  maven { url ossimMavenProxy }
 }
 
-// dependencyManagement {
-//   imports {
-//     mavenBom "org.grails:grails-bom:$grailsVersion"
-//   }
-//   applyMavenExclusions false
-// }
+sourceSets.main.output.classesDir = 'build/classes/groovy/main'
+io.ossim.gradleDefaults.Variables.setAdditionalVariables(project)
+io.ossim.gradleDefaults.Variables.setVersionVariables(project)
+version "${buildVersion}-${buildVersionTag}"
+jarDestination = "${projectDir}/build/libs/${project.name}-${version}.jar"
+io.ossim.gradleDefaults.Publications.addPublication(project, groupName, name, "${buildVersion}-${buildVersionTag}")
+io.ossim.gradleDefaults.Publications.addRepository(project, mavenPublishUrl, mavenRepoUsername, mavenRepoPassword)
 
 dependencies {
   compile "org.grails.plugins:actuator-ui:1.1"
@@ -97,28 +84,3 @@ dependencies {
 assets {
   packagePlugin = true
 }
-
-grailsPublish {
-  // TODO: Provide values here
-  user = "user"
-  key = "key"
-  githubSlug = "foo/bar"
-  license {
-    name = "Apache-2.0"
-  }
-  title = "My Plugin"
-  desc = "Full plugin description"
-  developers = [johndoe:"John Doe"]
-  portalUser = ""
-  portalPassword = ""
-}
-
-/*
-publishing {
-  publications {
-    mavenJava(MavenPublication) {
-      from components.java
-    }
-  }
-}
-*/

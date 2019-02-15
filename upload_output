@@ -1,0 +1,222 @@
+=> gradle clean upload --info
+Initialized native services in: /Users/tculp/.gradle/native
+The client will now receive all logging from the daemon (pid: 72057). The daemon log file: /Users/tculp/.gradle/daemon/4.10.2/daemon-72057.out.log
+Starting 6th build in daemon [uptime: 5 mins 30.466 secs, performance: 99%, no major garbage collections]
+Using 8 worker leases.
+Starting Build
+Settings evaluated using settings file '/Users/tculp/Projects/github.com/ossimlabs/omar-core/settings.gradle'.
+Projects loaded. Root project using build file '/Users/tculp/Projects/github.com/ossimlabs/omar-core/build.gradle'.
+Included projects: [root project 'omar-core', project ':omar-core-plugin']
+
+> Configure project :
+Evaluating root project 'omar-core' using build file '/Users/tculp/Projects/github.com/ossimlabs/omar-core/build.gradle'.
+
+> Configure project :omar-core-plugin
+Evaluating project ':omar-core-plugin' using build file '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build.gradle'.
+Default docker.url set to unix:///var/run/docker.sock
+/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin
+Applying dependency management to configuration 'annotationProcessor' in project 'omar-core-plugin'
+Applying dependency management to configuration 'apiElements' in project 'omar-core-plugin'
+Applying dependency management to configuration 'archives' in project 'omar-core-plugin'
+Applying dependency management to configuration 'compile' in project 'omar-core-plugin'
+Applying dependency management to configuration 'compileClasspath' in project 'omar-core-plugin'
+Applying dependency management to configuration 'compileOnly' in project 'omar-core-plugin'
+Applying dependency management to configuration 'default' in project 'omar-core-plugin'
+Applying dependency management to configuration 'dockerJava' in project 'omar-core-plugin'
+Applying dependency management to configuration 'implementation' in project 'omar-core-plugin'
+Applying dependency management to configuration 'profile' in project 'omar-core-plugin'
+Applying dependency management to configuration 'runtime' in project 'omar-core-plugin'
+Applying dependency management to configuration 'runtimeClasspath' in project 'omar-core-plugin'
+Applying dependency management to configuration 'runtimeElements' in project 'omar-core-plugin'
+Applying dependency management to configuration 'runtimeOnly' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testCompile' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testCompileClasspath' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testCompileOnly' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testImplementation' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testRuntime' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'omar-core-plugin'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'omar-core-plugin'
+Applying dependency management to configuration 'provided' in project 'omar-core-plugin'
+Applying dependency management to configuration 'agent' in project 'omar-core-plugin'
+Applying dependency management to configuration 'console' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astCompile' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astImplementation' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astRuntime' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astCompileOnly' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astCompileClasspath' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astAnnotationProcessor' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astRuntimeOnly' in project 'omar-core-plugin'
+Applying dependency management to configuration 'astRuntimeClasspath' in project 'omar-core-plugin'
+Applying dependency management to configuration 'gspCompile' in project 'omar-core-plugin'
+Applying dependency management to configuration 'assets' in project 'omar-core-plugin'
+Configuring agent
+Resolving dependency management for configuration 'agent' of project 'omar-core-plugin'
+Resolving global dependency management for project 'omar-core-plugin'
+Resolving dependency management for configuration 'runtime' of project 'omar-core-plugin'
+Resolving dependency management for configuration 'compile' of project 'omar-core-plugin'
+Resolving dependency management for configuration 'provided' of project 'omar-core-plugin'
+Resolving dependency management for configuration 'console' of project 'omar-core-plugin'
+All projects evaluated.
+Selected primary task 'clean' from project :
+Selected primary task 'uploadArchives' from project :
+Tasks to be executed: [task ':omar-core-plugin:clean', task ':omar-core-plugin:compileAstJava', task ':omar-core-plugin:compileAstGroovy', task ':omar-core-plugin:processAstResources', task ':omar-core-plugin:astClasses', task ':omar-core-plugin:compileJava', task ':omar-core-plugin:configScript', task ':omar-core-plugin:compileGroovy', task ':omar-core-plugin:copyAstClasses', task ':omar-core-plugin:assetPluginPackage', task ':omar-core-plugin:copyCommands', task ':omar-core-plugin:copyTemplates', task ':omar-core-plugin:processResources', task ':omar-core-plugin:classes', task ':omar-core-plugin:compileWebappGroovyPages', task ':omar-core-plugin:compileGroovyPages', task ':omar-core-plugin:jar', task ':omar-core-plugin:uploadArchives']
+:omar-core-plugin:clean (Thread[Task worker for ':',5,main]) started.
+
+> Task :omar-core-plugin:clean
+Task ':omar-core-plugin:clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:omar-core-plugin:clean (Thread[Task worker for ':',5,main]) completed. Took 0.032 secs.
+:omar-core-plugin:compileAstJava (Thread[Task worker for ':',5,main]) started.
+
+> Task :omar-core-plugin:compileAstJava NO-SOURCE
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/ast/java', not found
+Skipping task ':omar-core-plugin:compileAstJava' as it has no source files and no previous output files.
+:omar-core-plugin:compileAstJava (Thread[Task worker for ':',5,main]) completed. Took 0.001 secs.
+:omar-core-plugin:compileAstGroovy (Thread[Task worker for ':',5,main]) started.
+
+> Task :omar-core-plugin:compileAstGroovy NO-SOURCE
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/ast/groovy', not found
+Skipping task ':omar-core-plugin:compileAstGroovy' as it has no source files and no previous output files.
+:omar-core-plugin:compileAstGroovy (Thread[Task worker for ':',5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:processAstResources (Thread[Task worker for ':',5,main]) started.
+
+> Task :omar-core-plugin:processAstResources NO-SOURCE
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/ast/resources', not found
+Skipping task ':omar-core-plugin:processAstResources' as it has no source files and no previous output files.
+:omar-core-plugin:processAstResources (Thread[Task worker for ':',5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:astClasses (Thread[Task worker for ':',5,main]) started.
+
+> Task :omar-core-plugin:astClasses UP-TO-DATE
+Skipping task ':omar-core-plugin:astClasses' as it has no actions.
+:omar-core-plugin:astClasses (Thread[Task worker for ':',5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:compileJava (Thread[Task worker for ':',5,main]) started.
+
+> Task :omar-core-plugin:compileJava NO-SOURCE
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/main/java', not found
+Skipping task ':omar-core-plugin:compileJava' as it has no source files and no previous output files.
+:omar-core-plugin:compileJava (Thread[Task worker for ':',5,main]) completed. Took 0.001 secs.
+:omar-core-plugin:configScript (Thread[Task worker for ':' Thread 2,5,main]) started.
+
+> Task :omar-core-plugin:configScript
+Task ':omar-core-plugin:configScript' is not up-to-date because:
+  Output property '$1' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/config.groovy has been removed.
+:omar-core-plugin:configScript (Thread[Task worker for ':' Thread 2,5,main]) completed. Took 0.012 secs.
+:omar-core-plugin:compileGroovy (Thread[Task worker for ':' Thread 2,5,main]) started.
+This JVM does not support getting OS memory, so no OS memory status updates will be broadcast
+Initialized native services in: /Users/tculp/.gradle/native
+
+> Task :omar-core-plugin:compileGroovy
+Resolving dependency management for configuration 'compileClasspath' of project 'omar-core-plugin'
+Resolving dependency management for configuration 'compileOnly' of project 'omar-core-plugin'
+Resolving dependency management for configuration 'assets' of project 'omar-core-plugin'
+Resolving dependency management for configuration 'implementation' of project 'omar-core-plugin'
+Task ':omar-core-plugin:compileGroovy' is not up-to-date because:
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/classes/groovy/main has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/classes/groovy/main/META-INF has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/classes/groovy/main/META-INF/grails-plugin.xml has been removed.
+Starting process 'Gradle Worker Daemon 6'. Working directory: /Users/tculp/.gradle/workers Command: /Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin/java -Djava.security.manager=worker.org.gradle.process.internal.worker.child.BootstrapSecurityManager -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /Users/tculp/.gradle/caches/4.10.2/workerMain/gradle-worker.jar worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Worker Daemon 6'
+Successfully started process 'Gradle Worker Daemon 6'
+Started Gradle worker daemon (0.63 secs) with fork options DaemonForkOptions{executable=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin/java, minHeapSize=null, maxHeapSize=null, jvmArgs=[], classpath=[/Users/tculp/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-ant/2.4.13/b31e895be5f6548b857bb7866ff2e3a724e1154b/groovy-ant-2.4.13.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovydoc/2.4.13/2fd3e1edb7e019ccf043a946a1e338947da0162b/groovy-groovydoc-2.4.13.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-templates/2.4.13/50c6b36707328f94678892408455b7a9bfe96577/groovy-templates-2.4.13.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.4.13/a768f5f738bed0ab0b2dd54401830739203839c6/groovy-xml-2.4.13.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.13/de7b73bed517fa1323aab391b719b59c3702391a/groovy-2.4.13.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-junit/1.9.4/b063757dacaa716b643c2f9270e469183636ff11/ant-junit-1.9.4.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.4/6d473e8653d952045f550f4ef225a9591b79094a/ant-1.9.4.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.4/334b62cb4be0432769679e8b94e83f8fd5ed395c/ant-launcher-1.9.4.jar, /Users/tculp/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-antlr/1.9.4/4cf30025981dc2344324a0ef0e40063c3ef08f0a/ant-antlr-1.9.4.jar, /usr/local/Cellar/gradle/4.10.2/libexec/lib/ant-1.9.11.jar, /usr/local/Cellar/gradle/4.10.2/libexec/lib/ant-launcher-1.9.11.jar], keepAliveMode=SESSION}.
+:omar-core-plugin:compileGroovy (Thread[Task worker for ':' Thread 2,5,main]) completed. Took 4.307 secs.
+:omar-core-plugin:copyAstClasses (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:copyAstClasses NO-SOURCE
+Skipping task ':omar-core-plugin:copyAstClasses' as it has no source files and no previous output files.
+:omar-core-plugin:copyAstClasses (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:assetPluginPackage (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:assetPluginPackage
+Task ':omar-core-plugin:assetPluginPackage' is not up-to-date because:
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/resources/main/META-INF has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/resources/main/META-INF/assets has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/resources/main/META-INF/assets/actuator-ui has been removed.
+:omar-core-plugin:assetPluginPackage (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.037 secs.
+:omar-core-plugin:copyCommands (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:copyCommands NO-SOURCE
+Skipping task ':omar-core-plugin:copyCommands' as it has no source files and no previous output files.
+:omar-core-plugin:copyCommands (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:copyTemplates (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:copyTemplates NO-SOURCE
+Skipping task ':omar-core-plugin:copyTemplates' as it has no source files and no previous output files.
+:omar-core-plugin:copyTemplates (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:processResources (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:processResources
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/main/resources', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/grails-app/i18n', not found
+Task ':omar-core-plugin:processResources' is not up-to-date because:
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/resources/main/actuatorDashboard has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/resources/main/api has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/resources/main/application.yml has been removed.
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/main/resources', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/grails-app/i18n', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/main/resources', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/grails-app/i18n', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/main/resources', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/grails-app/i18n', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/src/main/resources', not found
+file or directory '/Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/grails-app/i18n', not found
+:omar-core-plugin:processResources (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.029 secs.
+:omar-core-plugin:classes (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:classes
+Skipping task ':omar-core-plugin:classes' as it has no actions.
+:omar-core-plugin:classes (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:compileWebappGroovyPages (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:compileWebappGroovyPages NO-SOURCE
+Skipping task ':omar-core-plugin:compileWebappGroovyPages' as it has no source files and no previous output files.
+:omar-core-plugin:compileWebappGroovyPages (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.0 secs.
+:omar-core-plugin:compileGroovyPages (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:compileGroovyPages
+Resolving dependency management for configuration 'gspCompile' of project 'omar-core-plugin'
+Task ':omar-core-plugin:compileGroovyPages' is not up-to-date because:
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/gsp-classes/main has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/gsp-classes/main/gsp has been removed.
+  Output property 'destinationDir' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/gsp-classes/main/gsp/views.properties has been removed.
+All input files are considered out-of-date for incremental task ':omar-core-plugin:compileGroovyPages'.
+[ant:gspc] Compiling 11 GSP files for package [omar-core-plugin]
+:omar-core-plugin:compileGroovyPages (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 2.807 secs.
+:omar-core-plugin:jar (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:jar
+Task ':omar-core-plugin:jar' is not up-to-date because:
+  Output property 'archivePath' file /Users/tculp/Projects/github.com/ossimlabs/omar-core/plugins/omar-core-plugin/build/libs/omar-core-plugin-1.2.5-SNAPSHOT.jar has been removed.
+:omar-core-plugin:jar (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 0.081 secs.
+:omar-core-plugin:uploadArchives (Thread[Task worker for ':' Thread 6,5,main]) started.
+
+> Task :omar-core-plugin:uploadArchives
+Task ':omar-core-plugin:uploadArchives' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Publishing configuration: configuration ':omar-core-plugin:archives'
+Publishing to org.gradle.api.publication.maven.internal.deployer.DefaultGroovyMavenDeployer@5d8c78bb
+Deploying to https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot
+Downloading: io/ossim/omar/plugins/omar-core-plugin/1.2.5-SNAPSHOT/maven-metadata.xml from repository remote at https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot/
+Transferring 0K from remote
+Uploading: io/ossim/omar/plugins/omar-core-plugin/1.2.5-SNAPSHOT/omar-core-plugin-1.2.5-20190215.221228-23.jar to repository remote at https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot/
+Transferring 296K from remote
+Uploaded 296K
+Uploading: io/ossim/omar/plugins/omar-core-plugin/1.2.5-SNAPSHOT/omar-core-plugin-1.2.5-20190215.221228-23.pom to repository remote at https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot/
+Transferring 30K from remote
+Uploaded 30K
+Downloading: io/ossim/omar/plugins/omar-core-plugin/maven-metadata.xml from repository remote at https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot/
+Transferring 0K from remote
+Uploading: io/ossim/omar/plugins/omar-core-plugin/1.2.5-SNAPSHOT/maven-metadata.xml to repository remote at https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot/
+Transferring 0K from remote
+Uploaded 0K
+Uploading: io/ossim/omar/plugins/omar-core-plugin/maven-metadata.xml to repository remote at https://nexus.ossim.io/nexus/content/repositories//omar-local-snapshot/
+Transferring 0K from remote
+Uploaded 0K
+:omar-core-plugin:uploadArchives (Thread[Task worker for ':' Thread 6,5,main]) completed. Took 6.076 secs.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.10.2/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 14s
+8 actionable tasks: 8 executed
+Stopped 1 worker daemon(s).
