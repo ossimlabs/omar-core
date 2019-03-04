@@ -28,9 +28,8 @@ node("${BUILD_NODE}"){
 
     stage ("Assemble") {
         sh """
-        gradle assemble \
-            -PossimMavenProxy=${OSSIM_MAVEN_PROXY} \
-            -x bootRepackage
+            gradle assemble \
+                -PossimMavenProxy=${OSSIM_MAVEN_PROXY} 
         """
         archiveArtifacts "plugins/*/build/libs/*.jar"
     }
@@ -43,8 +42,8 @@ node("${BUILD_NODE}"){
                         passwordVariable: 'MAVEN_REPO_PASSWORD']])
         {
             sh """
-            gradle publish \
-                -PossimMavenProxy=${OSSIM_MAVEN_PROXY}
+                gradle publish \
+                    -PossimMavenProxy=${OSSIM_MAVEN_PROXY}
             """
         }
     }

@@ -81,6 +81,8 @@ dependencies {
   compile "io.swagger:swagger-models:1.5.15"
 }
 
+bootRepackage.enabled = false
+
 assets {
   packagePlugin = true
 }
