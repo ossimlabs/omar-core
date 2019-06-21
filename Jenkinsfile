@@ -7,7 +7,8 @@ properties([
             [$class: "GitHubPushTrigger"]
     ]),
     [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ossimlabs/omar-core'],
-    disableConcurrentBuilds()
+    disableConcurrentBuilds(),
+    buildDiscarder( logRotator( numToKeepStr: '5' ) )
 ])
 
 node("${BUILD_NODE}"){
@@ -32,7 +33,7 @@ node("${BUILD_NODE}"){
     stage ("Assemble") {
         sh """
             gradle assemble \
-                -PossimMavenProxy=${OSSIM_MAVEN_PROXY} 
+                -PossimMavenProxy=${OSSIM_MAVEN_PROXY}
         """
         archiveArtifacts "plugins/*/build/libs/*.jar"
     }
