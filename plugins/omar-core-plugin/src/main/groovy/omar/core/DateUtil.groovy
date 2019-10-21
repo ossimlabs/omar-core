@@ -44,7 +44,9 @@ class DateUtil
 
   public static def formatUTC(Date date, String format="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
   {
-    date.format(format, TimeZone.getTimeZone("UTC"))
+    def dateFormat = new SimpleDateFormat(format);
+    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    return dateFormat.format(date);
   }
 
   public static Date parseDate(String dateString)

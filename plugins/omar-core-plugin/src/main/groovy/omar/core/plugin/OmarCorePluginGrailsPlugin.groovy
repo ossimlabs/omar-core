@@ -1,18 +1,18 @@
-package omar.core
+package omar.core.plugin
 
 import grails.plugins.*
 
-class OmarCoreGrailsPlugin extends Plugin {
+class OmarCorePluginGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.1.10 > *"
+    def grailsVersion = "4.0.0 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"
     ]
 
     // TODO Fill in these fields
-    def title = "Omar Core" // Headline display name of the plugin
+    def title = "Omar Core Plugin" // Headline display name of the plugin
     def author = "Your name"
     def authorEmail = ""
     def description = '''\
@@ -21,7 +21,7 @@ Brief summary/description of the plugin.
     def profiles = ['web']
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/omar-core"
+    def documentation = "http://grails.org/plugin/omar-core-plugin"
 
     // Extra (optional) plugin metadata
 
@@ -64,8 +64,6 @@ Brief summary/description of the plugin.
             delegate.set(delegate.protocol, delegate.host, delegate.port, delegate.authority, delegate.userInfo,
                          delegate.path, queryParams, delegate.ref)
         }
-
-        // TODO Implement registering dynamic methods to classes (optional)
     }
 
     void doWithApplicationContext() {
