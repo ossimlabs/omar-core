@@ -13,7 +13,7 @@ dependencies {
     // compile "io.ossim.omar.plugins:omar-core-plugin:+"
     }
 
-    compile group: 'joda-time', name: 'joda-time', version: '2.10.4'
+    compile group: 'joda-time', name: 'joda-time', version: '2.10.5'
     compile group: 'org.webjars', name: 'swagger-ui', version: '3.24.0'
 
     compile group: 'io.swagger', name: 'swagger-models', version: '1.5.24'
