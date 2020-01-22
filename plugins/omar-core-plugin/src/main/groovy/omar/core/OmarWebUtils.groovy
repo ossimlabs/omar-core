@@ -23,8 +23,7 @@ class OmarWebUtils
 		//targetStream.close()
 
 		//return zippedBytes.encodeBase64().toString()
-		//return targetStream
-		return "cheese"
+		return targetStream
 	}
 
 	/**
