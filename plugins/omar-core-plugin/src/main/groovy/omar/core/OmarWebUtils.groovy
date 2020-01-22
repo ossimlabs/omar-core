@@ -31,9 +31,9 @@ class OmarWebUtils
 	 * @param list
 	 * @return
 	 */
-	static String gzippify(ArrayList list, String charset = StandardCharsets.UTF_8.name()){
-		return gzippify(list.toString(), charset)
-	}
+	//static String gzippify(ArrayList list, String charset = StandardCharsets.UTF_8.name()){
+	//	return gzippify(list.toString(), charset)
+	//}
 
 	static String unGzippify(String buffer, String charset = StandardCharsets.UTF_8.name()) {
 		GZIPInputStream inflaterStream = new GZIPInputStream(new ByteArrayInputStream(buffer.decodeBase64()))
