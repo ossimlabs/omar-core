@@ -20,7 +20,7 @@ class OmarWebUtils
 		gzipStream.close()
 
 		//byte[] zippedBytes = targetStream.toByteArray()
-		targetStream.close()
+		//targetStream.close()
 
 		//return zippedBytes.encodeBase64().toString()
 		return targetStream
