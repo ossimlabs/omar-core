@@ -16,7 +16,7 @@ class OmarWebUtils
 	static String gzippify(String buffer /*, String charset = StandardCharsets.UTF_8.name()*/ ){
 		ByteArrayOutputStream targetStream = new ByteArrayOutputStream()
 		GZIPOutputStream gzipStream = new GZIPOutputStream(targetStream)
-		gzipStream.write(buffer.getBytes(charset))
+		gzipStream.write(buffer.getBytes(/*charset*/))
 		gzipStream.close()
 
 		//byte[] zippedBytes = targetStream.toByteArray()
