@@ -13,7 +13,7 @@ class OmarWebUtils
 	 * @param buffer The input string
 	 * @return The encoded, gzipped string
 	 */
-	static String gzippify(String buffer /*, String charset = StandardCharsets.UTF_8.name()*/ ){
+	static ByteArrayOutputStream gzippify(String buffer /*, String charset = StandardCharsets.UTF_8.name()*/ ){
 		ByteArrayOutputStream targetStream = new ByteArrayOutputStream()
 		GZIPOutputStream gzipStream = new GZIPOutputStream(targetStream)
 		gzipStream.write(buffer.getBytes(/*charset*/))
