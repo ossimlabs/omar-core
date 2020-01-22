@@ -9,6 +9,22 @@ class OmarWebUtils
 	static String GZIP_ENCODE_HEADER_PARAM = 'gzip'
 
 	/**
+	 * Transform a string into a gzipped byte array output stream
+	 * @param buffer The input string
+	 * @return The gzipped byte array output stream
+	 */
+	static String gzippify( String buffer ) {
+		ByteArrayOutputStream targetStream = new ByteArrayOutputStream()
+		GZIPOutputStream gzipStream = new GZIPOutputStream( targetStream )
+		gzipStream.write( buffer.getBytes() )
+		gzipStream.close()
+
+		targetStream.close()
+
+		return targetStream
+	}
+	
+	/**
 	 * Transform a string into a base64-encoded, gzipped string
 	 * @param buffer The input string
 	 * @return The encoded, gzipped string
