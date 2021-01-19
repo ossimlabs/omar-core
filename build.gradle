@@ -68,29 +68,28 @@ subprojects { project ->
 
             project.with {
               publishing {
-                publications {
-                    "${project.name}" (MavenPublication) {
-                        group groupName
-                        groupId = groupName
-                        version project.version
-                        from components.java
+                    publications {
+                        "${project.name}" (MavenPublication) {
+                            group groupName
+                            groupId = groupName
+                            version project.version
+                            from components.java
+                        }
                     }
-                }
-                repositories {
+                    repositories {
                     maven {
                         credentials {
                             username mavenRepoUsername
                             password mavenRepoPassword
+                            }
+                            url = mavenPublishUrl.toLowerCase()
                         }
-                        url = mavenPublishUrl.toLowerCase()
+                    }                
+                    jar.onlyIf {
+                        !file(jarDestination).exists()
                     }
-              }
+                }
             }
-
-            jar.onlyIf {
-                !file(jarDestination).exists()
-            }
-        }
         }
 
         apply plugin:"asset-pipeline"
