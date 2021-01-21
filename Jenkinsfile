@@ -2,9 +2,7 @@ properties([
     parameters([
         string(name: 'DOCKER_REGISTRY_DOWNLOAD_URL', defaultValue: 'nexus-docker-private-group.ossim.io', description: 'Repository of docker images')
     ]),
-    pipelineTriggers([
-        [$class: "GitHubPushTrigger"]
-    ]),
+    pipelineTriggers([[$class: "GitHubPushTrigger"]]),
     [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ossimlabs/omar-core'],
     buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', daysToKeepStr: '', numToKeepStr: '20')),
     disableConcurrentBuilds()
@@ -59,8 +57,10 @@ podTemplate(
 
       script {
         if (BRANCH_NAME == 'master') {
+          TAG_NAME = VERSION
           buildName "${VERSION} - ${BRANCH_NAME}"
         } else {
+          TAG_NAME = BRANCH_NAME + "-" + System.currentTimeMillis()
           buildName "${VERSION} - ${BRANCH_NAME}-SNAPSHOT"
         }
       }
@@ -75,20 +75,6 @@ podTemplate(
       }
 
       load "common-variables.groovy"
-
-      switch (BRANCH_NAME) {
-        case "master":
-          TAG_NAME = VERSION
-          break
-
-        case "dev":
-          TAG_NAME = "latest"
-          break
-
-        default:
-          TAG_NAME = BRANCH_NAME
-          break
-      }
 
       DOCKER_IMAGE_PATH = "${DOCKER_REGISTRY_PRIVATE_UPLOAD_URL}/omar-core"
     }
