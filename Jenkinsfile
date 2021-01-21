@@ -11,7 +11,7 @@ properties([
     disableConcurrentBuilds()
 ])
 
-node('omar-build'){
+node(POD_LABEL){
 
     stage("Checkout branch")
     {
