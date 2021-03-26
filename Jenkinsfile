@@ -81,7 +81,7 @@ podTemplate(
 
     stage("Assemble") {
       sh """
-        ./gradlew assemble -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
+        ./gradlew assemble -PossimMavenProxy=${MAVEN_DOWNLOAD_URL} -PbranchName=${BRANCH_NAME}
       """
       archiveArtifacts "plugins/*/build/libs/*.jar"
       //archiveArtifacts "apps/*/build/libs/*.jar"
@@ -93,7 +93,7 @@ podTemplate(
                         usernameVariable: 'MAVEN_REPO_USERNAME',
                         passwordVariable: 'MAVEN_REPO_PASSWORD']]) {
         sh """
-          ./gradlew publish -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
+          ./gradlew publish -PossimMavenProxy=${MAVEN_DOWNLOAD_URL} -PbranchName=${BRANCH_NAME}
         """
       }
     }
