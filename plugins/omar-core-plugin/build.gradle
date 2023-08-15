@@ -1,33 +1,13 @@
-if ( System.getenv('O2_INLINE_BUILD') ) {
-    grails {
-        plugins {
-            if ( System.getenv('O2_INLINE_BUILD') ) {
-            //    compile project(":omar-core-plugin")
-            }
-        }
-    }
+plugins {
 }
+
 dependencies {
-    //compile project( ":${ rootProject.name }-lib" )
-    if ( ! System.getenv('O2_INLINE_BUILD') ) {
-    // compile "io.ossim.omar.plugins:omar-core-plugin:+"
-    }
+    implementation "joda-time:joda-time:${jodaTimeVersion}"
+    implementation "org.grails.plugins:swagger:${swaggerPluginVersion}"
+    implementation "io.swagger:swagger-annotations:${swaggerVersion}"
+}
 
-    compile group: 'joda-time', name: 'joda-time', version: '2.10.9'
-    compile group: 'org.webjars', name: 'swagger-ui', version: '3.38.0'
-
-    // compile group: 'io.swagger', name: 'swagger-models', version: '1.5.24'
-    // compile group: 'io.swagger', name: 'swagger-servlet', version: '1.5.24'
-    // compile group: 'io.swagger', name: 'swagger-models', version: '1.5.24'
-
-    compile group: 'io.swagger', name: 'swagger-models', version: '1.6.2'
-    compile group: 'io.swagger', name: 'swagger-servlet', version: '1.6.2'
-    compile group: 'io.swagger', name: 'swagger-models', version: '1.6.2'
-
-
-    compile ( 'org.grails.plugins:swagger:1.0.1' ) {
-         exclude module: 'swagger-models'
-         exclude module: 'swagger-servlet'
-         exclude module: 'swagger-ui'
-    }
+assets {
+  minifyJs = true
+  minifyCss = true
 }
