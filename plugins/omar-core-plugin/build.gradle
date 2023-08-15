@@ -3,8 +3,8 @@ plugins {
 
 dependencies {
     implementation "joda-time:joda-time:${jodaTimeVersion}"
-    implementation "org.grails.plugins:swagger:${swaggerPluginVersion}"
     implementation "io.swagger:swagger-annotations:${swaggerVersion}"
+    implementation "org.grails.plugins:swagger:${swaggerPluginVersion}"
 }
 
 assets {
