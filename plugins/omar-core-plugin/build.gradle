@@ -1,9 +1,10 @@
 plugins {
+  id 'java-library'
 }
 
 dependencies {
     implementation "joda-time:joda-time:${jodaTimeVersion}"
-    implementation "io.swagger:swagger-annotations:${swaggerVersion}"
+    api "io.swagger:swagger-annotations:${swaggerVersion}"
     implementation "org.grails.plugins:swagger:${swaggerPluginVersion}"
 }
 
