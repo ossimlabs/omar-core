@@ -2,6 +2,9 @@ package omar.core.plugin
 
 import grails.plugins.*
 
+import io.swagger.models.*
+import org.apache.commons.lang.StringUtils
+
 class OmarCorePluginGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
@@ -40,9 +43,32 @@ class OmarCorePluginGrailsPlugin extends Plugin {
    //    def scm = [ url: "https://github.com/grails/OmarCorePlugin" ]
 
        Closure doWithSpring() { {->
-               // TODO Implement runtime spring config (optional)
-           }
-       }
+        swagger(Swagger) {
+            Map swaggerConfig = (config.swagger as Map) ?: [:]
+            Map infoConfig = swaggerConfig.info ?: [:]
+            Info swaggerInfo = new Info(
+                description: infoConfig.description ?: StringUtils.EMPTY,
+                version: infoConfig.version ?: StringUtils.EMPTY,
+                title: infoConfig.title ?: StringUtils.EMPTY,
+                termsOfService: infoConfig.termsOfServices ?: StringUtils.EMPTY
+            )
+            Map contactConfig = infoConfig.contact ?: [:]
+            swaggerInfo.setContact(new Contact(
+                name: contactConfig.name ?: StringUtils.EMPTY,
+                url: contactConfig.url ?: StringUtils.EMPTY,
+                email: contactConfig.email ?: StringUtils.EMPTY)
+            )
+            Map licenseConfig = infoConfig.license ?: [:]
+            swaggerInfo.license(new License(
+                name: licenseConfig.name ?: StringUtils.EMPTY,
+                url: licenseConfig.url ?: StringUtils.EMPTY)
+            )
+            info = swaggerInfo
+    //                host = swaggerAsMap.host ?: "localhost:8080"
+            schemes = swaggerConfig.schemes ?: [Scheme.HTTP]
+            consumes = swaggerConfig.consumes ?: ["application/json"]
+        }
+       } }
 
        void doWithDynamicMethods() {
         URL.metaClass.getParams{ ->

@@ -5,7 +5,8 @@ plugins {
 dependencies {
     implementation "joda-time:joda-time:${jodaTimeVersion}"
     api "io.swagger:swagger-models:${swaggerVersion}"
-//    implementation "org.grails.plugins:swagger:${swaggerPluginVersion}"
+    api "io.swagger:swagger-servlet:${swaggerVersion}"
+    runtimeOnly "org.webjars:swagger-ui:${swaggerUiVersion}"
 }
 
 assets {
