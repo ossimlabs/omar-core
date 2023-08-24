@@ -6,7 +6,7 @@ dependencies {
     implementation "joda-time:joda-time:${jodaTimeVersion}"
     api "io.swagger:swagger-models:${swaggerVersion}"
     api "io.swagger:swagger-servlet:${swaggerVersion}"
-    runtimeOnly "org.webjars:swagger-ui:${swaggerUiVersion}"
+//    runtimeOnly "org.webjars:swagger-ui:${swaggerUiVersion}"
 }
 
 assets {
