@@ -29,10 +29,11 @@ if ( System.getenv( 'O2_INLINE_BUILD' ) ) {
     def modules = [
     ]
 
-    File moduleDir = "${rootProject.projectDir.parent}/${module}" as File
+    modules?.each { module ->
+        File moduleDir = "${rootProject.projectDir.parent}/${module}" as File
 
-    if ( moduleDir.exists() ) {
-        includeBuild  moduleDir.absolutePath
+        if ( moduleDir.exists() ) {
+            includeBuild  moduleDir.absolutePath
+        }
     }
-
 }
