@@ -1,17 +1,17 @@
-# omar-core
+## Grails 6.0.0 Documentation
 
-This plugin is used by the following services:
+- [User Guide](https://docs.grails.org/6.0.0/guide/index.html)
+- [API Reference](https://docs.grails.org/6.0.0/api/index.html)
+- [Grails Guides](https://guides.grails.org/index.html)
+---
 
-  * omar-download
-  * omar-geoscript
-  * omar-oms
-  * omar-raster
-  * omar-reachback
-  * omar-stager-core
-  * omar-ui
-  * omar-video
-  * omar-wfs
-  * omar-wfs
-  * omar-wms
-  * omar-wmts
-  * tlv
+## Feature scaffolding documentation
+
+- [Grails Scaffolding Plugin documentation](https://grails.github.io/scaffolding/latest/groovydoc/)
+
+- [https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html](https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html)
+
+## Feature asset-pipeline-grails documentation
+
+- [Grails Asset Pipeline Core documentation](https://www.asset-pipeline.com/manual/)
+
